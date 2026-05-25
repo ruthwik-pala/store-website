@@ -1,5 +1,6 @@
 import StorefrontClient from "@/app/components/StorefrontClient";
 import { categories, instagramVideos, products } from "@/lib/products";
+import { assetPath } from "@/lib/site";
 
 const chatNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
 const storePhone = process.env.NEXT_PUBLIC_STORE_PHONE || "098491 99707";
@@ -16,7 +17,7 @@ export default function HomePage() {
 
       <header className="site-header">
         <a className="brand-wrap" href="#top" aria-label="Ananthula Kedari home">
-          <img src="/ananthula-wordmark.svg" alt="Ananthula Kedari" />
+          <img src={assetPath("/ananthula-wordmark.svg")} alt="Ananthula Kedari" />
         </a>
 
         <nav className="nav-links" aria-label="Primary navigation">
@@ -57,8 +58,8 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hero-images" aria-hidden="true">
-          <img className="hero-main-img" src="/catalog/shimmer-saree-portrait.jpg" alt="" />
-          <img className="hero-float-img" src="/lookbook/editorial-2.jpg" alt="" />
+          <img className="hero-main-img" src={assetPath("/catalog/shimmer-saree-portrait.jpg")} alt="" />
+          <img className="hero-float-img" src={assetPath("/lookbook/editorial-2.jpg")} alt="" />
         </div>
       </section>
 
@@ -77,7 +78,7 @@ export default function HomePage() {
         <div className="category-grid">
           {categories.map((item) => (
             <a className="category-card" href={item.href} key={item.title}>
-              <img src={item.image} alt={item.title} loading="lazy" />
+              <img src={assetPath(item.image)} alt={item.title} loading="lazy" />
               <strong>{item.title}</strong>
             </a>
           ))}
@@ -105,7 +106,7 @@ export default function HomePage() {
         <div className="video-grid video-link-grid">
           {instagramVideos.map((video) => (
             <a className="video-link-card" href={video.url} target="_blank" rel="noreferrer" key={video.title}>
-              <img src={video.image} alt={video.title} loading="lazy" />
+              <img src={assetPath(video.image)} alt={video.title} loading="lazy" />
               <span className="play-button">Play</span>
               <div>
                 <small>{video.eyebrow}</small>
@@ -135,7 +136,7 @@ export default function HomePage() {
 
       <footer id="footer" className="site-footer">
         <div className="footer-brand">
-          <img src="/ananthula-wordmark.svg" alt="Ananthula Kedari" />
+          <img src={assetPath("/ananthula-wordmark.svg")} alt="Ananthula Kedari" />
           <p>Premium saree and ethnic wear showcase for Ananthula Kedari, serving Warangal since 1951.</p>
         </div>
 

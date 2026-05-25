@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/site";
+
 const chatNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
 
 function getBuyLink(product) {
@@ -12,7 +14,7 @@ export default function ProductCard({ product, index = 0 }) {
   return (
     <article className="product-card reveal" style={{ animationDelay: `${Math.min(index * 50, 280)}ms` }}>
       <a className="image-wrap" href={getBuyLink(product)} target="_blank" rel="noreferrer" aria-label={`Buy ${product.name}`}>
-        <img src={product.image} alt={product.name} loading="lazy" />
+        <img src={assetPath(product.image)} alt={product.name} loading="lazy" />
         <div className="card-badges">
           <span className="pill">{product.category}</span>
           <span className="pill muted">{product.tag}</span>

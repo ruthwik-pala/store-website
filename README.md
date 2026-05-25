@@ -1,20 +1,34 @@
-# StyleSquare (Next.js + MERN-ready)
+# Ananthula Kedari Store Website
 
-## Run
+Premium static Next.js storefront for Ananthula Kedari sarees. Built for GitHub Pages with direct WhatsApp buying.
 
-1. Install dependencies
-   npm install
-2. Create env file
-   cp .env.local.example .env.local
-3. Update WhatsApp number in `.env.local`
-4. Start app
-   npm run dev
+## Run Locally
 
-Open http://localhost:3000
+```bash
+npm install
+cp .env.local.example .env.local
+npm run dev
+```
 
-## Notes
+Open `http://localhost:3000`.
 
-- Ordering is WhatsApp-first (no payment gateway).
-- API route: `/api/products`
-- If `MONGODB_URI` is set, products are served from MongoDB collection `products`.
-- If MongoDB is not configured, seeded local products are served.
+## Configure Buying
+
+Update `.env.local` with the shop WhatsApp number:
+
+```bash
+NEXT_PUBLIC_WHATSAPP_NUMBER=91XXXXXXXXXX
+NEXT_PUBLIC_STORE_PHONE=XXXXXXXXXX
+```
+
+## GitHub Pages
+
+This repo deploys with GitHub Actions from `.github/workflows/deploy.yml`.
+
+The workflow builds a static export with:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/store-website npm run build
+```
+
+After pushing to `main`, enable GitHub Pages in the repository settings and choose `GitHub Actions` as the source.
