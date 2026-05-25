@@ -1,0 +1,14 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ananthula Online logo</title>
+  <desc id="desc">A maroon and gold lotus inspired monogram for Ananthula Online.</desc>
+  <rect width="240" height="240" rx="48" fill="#5F0E23"/>
+  <path d="M120 33C139 58 140 82 120 107C100 82 101 58 120 33Z" fill="#F4D592"/>
+  <path d="M74 57C107 66 121 84 120 116C90 107 74 87 74 57Z" fill="#C88A31"/>
+  <path d="M166 57C133 66 119 84 120 116C150 107 166 87 166 57Z" fill="#C88A31"/>
+  <path d="M52 105C86 101 111 113 120 145C85 150 61 137 52 105Z" fill="#F4D592"/>
+  <path d="M188 105C154 101 129 113 120 145C155 150 179 137 188 105Z" fill="#F4D592"/>
+  <path d="M82 160C105 146 135 146 158 160C145 182 95 182 82 160Z" fill="#C88A31"/>
+  <path d="M81 197H159" stroke="#F8ECD1" stroke-width="8" stroke-linecap="round"/>
+  <path d="M93 179L120 74L147 179" stroke="#F8ECD1" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M103 141H137" stroke="#F8ECD1" stroke-width="8" stroke-linecap="round"/>
+</svg>
