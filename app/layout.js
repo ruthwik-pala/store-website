@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Ananthula Online | Ananthula Kedari Since 1951",
-  description: "Official online showcase for Ananthula Kedari: pure pattu sarees, ethnic wear, bridal, wedding, and dresses."
+  title: "Your Saree Studio | Premium Saree Store Template",
+  description: "A premium static storefront template for sarees, bridal silks, festive wear, and WhatsApp-first buying."
 };
 
 export default function RootLayout({ children }) {

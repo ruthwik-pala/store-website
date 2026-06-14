@@ -4,7 +4,7 @@ const chatNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
 
 function getBuyLink(product) {
   const text = encodeURIComponent(
-    `Hi Ananthula Kedari, I want to buy ${product.name}. Please share available colors, price, and delivery details.`
+    `Hi, I want to buy ${product.name}. Please share available colors, price, and delivery details.`
   );
 
   return `https://wa.me/${chatNumber}?text=${text}`;

@@ -1,6 +1,6 @@
-# Ananthula Kedari Store Website
+# Saree Store Website Template
 
-Premium static Next.js storefront for Ananthula Kedari sarees. Built for GitHub Pages with direct WhatsApp buying.
+Premium static Next.js storefront template for sarees, bridal silks, festive wear, and WhatsApp-first buying.
 
 ## Run Locally
 
@@ -12,13 +12,14 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-## Configure Buying
+## Configure Store Details
 
-Update `.env.local` with the shop WhatsApp number:
+Update `.env.local` with your placeholders or real store details:
 
 ```bash
 NEXT_PUBLIC_WHATSAPP_NUMBER=91XXXXXXXXXX
-NEXT_PUBLIC_STORE_PHONE=XXXXXXXXXX
+NEXT_PUBLIC_STORE_PHONE=+91XXXXXXXXXX
+NEXT_PUBLIC_INSTAGRAM_HANDLE=your_store
 ```
 
 ## GitHub Pages

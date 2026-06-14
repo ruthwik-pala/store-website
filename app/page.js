@@ -3,8 +3,9 @@ import { categories, instagramVideos, products } from "@/lib/products";
 import { assetPath } from "@/lib/site";
 
 const chatNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
-const storePhone = process.env.NEXT_PUBLIC_STORE_PHONE || "098491 99707";
-const storeAddress = "Door No. 12-7-5, S V N Road, Batala Bazaar, Warangal, Telangana 506002";
+const storePhone = process.env.NEXT_PUBLIC_STORE_PHONE || "+91 99999 99999";
+const storeAddress = "123 Fashion Street, Main Market, Your City, Your State 000000";
+const instagramHandle = process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || "your_store";
 
 function buildBuyLink(message) {
   return `https://wa.me/${chatNumber}?text=${encodeURIComponent(message)}`;
@@ -13,11 +14,11 @@ function buildBuyLink(message) {
 export default function HomePage() {
   return (
     <main>
-      <div className="sale-strip">Premium sarees, bridal silks and festive collections from Ananthula Kedari, Warangal</div>
+      <div className="sale-strip">Premium sarees, bridal silks and festive collections from Your Saree Studio</div>
 
       <header className="site-header">
-        <a className="brand-wrap" href="#top" aria-label="Ananthula Kedari home">
-          <img src={assetPath("/ananthula-wordmark.svg")} alt="Ananthula Kedari" />
+        <a className="brand-wrap" href="#top" aria-label="Your Saree Studio home">
+          <img src={assetPath("/store-wordmark.svg")} alt="Your Saree Studio" />
         </a>
 
         <nav className="nav-links" aria-label="Primary navigation">
@@ -29,7 +30,7 @@ export default function HomePage() {
 
         <a
           className="header-cta"
-          href={buildBuyLink("Hi Ananthula Kedari, I want to buy from your saree collection.")}
+          href={buildBuyLink("Hi, I want to buy from your saree collection.")}
           target="_blank"
           rel="noreferrer"
         >
@@ -39,7 +40,7 @@ export default function HomePage() {
 
       <section id="top" className="hero-showcase">
         <div className="hero-copy">
-          <span>Since 1951 • Warangal</span>
+          <span>Premium Sarees • Bridal • Festive</span>
           <h1>Luxury sarees for every celebration.</h1>
           <p>
             Discover pattu, bridal and designer sarees with a premium boutique shopping experience. Choose your style and
@@ -49,7 +50,7 @@ export default function HomePage() {
             <a className="btn-primary" href="#collections">Shop Collection</a>
             <a
               className="btn-outline"
-              href={buildBuyLink("Hi Ananthula Kedari, please help me choose a saree.")}
+              href={buildBuyLink("Hi, please help me choose a saree.")}
               target="_blank"
               rel="noreferrer"
             >
@@ -67,7 +68,7 @@ export default function HomePage() {
         <span>Curated Sarees</span>
         <span>Live Stock on WhatsApp</span>
         <span>Bridal Friendly</span>
-        <span>Warangal Store</span>
+        <span>Local Store Support</span>
       </section>
 
       <section id="categories" className="category-block">
@@ -89,12 +90,12 @@ export default function HomePage() {
 
       <section className="experience-band">
         <div>
-          <span>Ananthula Heritage</span>
-          <h2>Trusted saree curation since 1951.</h2>
+          <span>Store Heritage</span>
+          <h2>Trusted saree curation for special moments.</h2>
         </div>
         <p>
           From wedding silks to festive pattu sarees, every edit is presented for customers who want rich colors,
-          elegant drapes and direct guidance from the Warangal store before they buy.
+          elegant drapes and direct guidance from the store before they buy.
         </p>
       </section>
 
@@ -121,12 +122,12 @@ export default function HomePage() {
       <section className="contact-panel">
         <div>
           <span>Ready to buy?</span>
-          <h2>Message Ananthula Kedari directly.</h2>
+          <h2>Message the store directly.</h2>
           <p>Ask for price, colors, stock availability, blouse details and delivery support.</p>
         </div>
         <a
           className="btn-primary"
-          href={buildBuyLink("Hi Ananthula Kedari, I want to buy from the website. Please help me with available options.")}
+          href={buildBuyLink("Hi, I want to buy from the website. Please help me with available options.")}
           target="_blank"
           rel="noreferrer"
         >
@@ -136,8 +137,8 @@ export default function HomePage() {
 
       <footer id="footer" className="site-footer">
         <div className="footer-brand">
-          <img src={assetPath("/ananthula-wordmark.svg")} alt="Ananthula Kedari" />
-          <p>Premium saree and ethnic wear showcase for Ananthula Kedari, serving Warangal since 1951.</p>
+          <img src={assetPath("/store-wordmark.svg")} alt="Your Saree Studio" />
+          <p>Premium saree and ethnic wear storefront template for bridal, pattu and festive collections.</p>
         </div>
 
         <div className="footer-column">
@@ -150,10 +151,10 @@ export default function HomePage() {
 
         <div className="footer-column">
           <h3>Contact</h3>
-          <a href={buildBuyLink("Hi Ananthula Kedari, I want help buying a saree.")} target="_blank" rel="noreferrer">
+          <a href={buildBuyLink("Hi, I want help buying a saree.")} target="_blank" rel="noreferrer">
             WhatsApp Order Support
           </a>
-          <a href="https://www.instagram.com/ananthula_online/" target="_blank" rel="noreferrer">@ananthula_online</a>
+          <a href={`https://www.instagram.com/${instagramHandle}/`} target="_blank" rel="noreferrer">@{instagramHandle}</a>
           <a href={`tel:${storePhone.replace(/\s/g, "")}`}>{storePhone}</a>
         </div>
 
@@ -167,7 +168,7 @@ export default function HomePage() {
           >
             Open in Maps
           </a>
-          <small>Open daily around 10:30 AM - 10:00 PM. Please confirm before visiting.</small>
+          <small>Placeholder timings: 10:30 AM - 10:00 PM. Replace with your real store hours.</small>
         </div>
       </footer>
     </main>
