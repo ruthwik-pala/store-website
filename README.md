@@ -19,7 +19,6 @@ Update `.env.local` with your placeholders or real store details:
 ```bash
 NEXT_PUBLIC_WHATSAPP_NUMBER=91XXXXXXXXXX
 NEXT_PUBLIC_STORE_PHONE=+91XXXXXXXXXX
-NEXT_PUBLIC_INSTAGRAM_HANDLE=your_store
 ```
 
 ## GitHub Pages

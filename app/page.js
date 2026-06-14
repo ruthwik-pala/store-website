@@ -5,7 +5,6 @@ import { assetPath } from "@/lib/site";
 const chatNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
 const storePhone = process.env.NEXT_PUBLIC_STORE_PHONE || "+91 99999 99999";
 const storeAddress = "123 Fashion Street, Main Market, Your City, Your State 000000";
-const instagramHandle = process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || "your_store";
 
 function buildBuyLink(message) {
   return `https://wa.me/${chatNumber}?text=${encodeURIComponent(message)}`;
@@ -154,7 +153,7 @@ export default function HomePage() {
           <a href={buildBuyLink("Hi, I want help buying a saree.")} target="_blank" rel="noreferrer">
             WhatsApp Order Support
           </a>
-          <a href={`https://www.instagram.com/${instagramHandle}/`} target="_blank" rel="noreferrer">@{instagramHandle}</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
           <a href={`tel:${storePhone.replace(/\s/g, "")}`}>{storePhone}</a>
         </div>
 
